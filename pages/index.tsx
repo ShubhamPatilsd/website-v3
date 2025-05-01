@@ -72,15 +72,15 @@ export default function Home() {
           }}
         />
         <div className="px-18 pt-12">
-          <h1 className="text-7xl font-semibold text-slate-800 z-10 relative">
+          <h1 className="text-7xl font-bold text-slate-800 z-10 relative">
             Shubham Patil
           </h1>
 
           <div className="pt-8 space-y-4">
-            <p className="text-lg font-medium text-slate-800 z-10 relative">
+            <p className=" text-slate-800 z-10 relative">
               I'm an innovator, changemaker, and developer at heart.
             </p>
-            <p className="text-lg font-medium text-slate-800 z-10 relative">
+            <p className=" text-slate-800 z-10 relative">
               I currently call{" "}
               <span
                 className="bg-amber-50 text-amber-800 font-bold border-b border-amber-500 pt-1 cursor-pointer relative"
@@ -116,6 +116,7 @@ export default function Home() {
                 src="/sf-bay-area-map.png"
                 alt="Map of San Francisco Bay Area"
                 fill
+                loading="lazy"
                 style={{ objectFit: "cover" }}
               />
             </div>

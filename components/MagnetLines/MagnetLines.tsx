@@ -68,7 +68,7 @@ const MagnetLines: React.FC<MagnetLinesProps> = ({
   const spans = Array.from({ length: total }, (_, i) => (
     <span
       key={i}
-      className="block origin-center"
+      className="block origin-center rounded-full"
       style={{
         backgroundColor: lineColor,
         width: lineWidth,
