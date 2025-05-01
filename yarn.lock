@@ -618,6 +618,11 @@ styled-jsx@5.1.6:
   dependencies:
     client-only "0.0.1"
 
+tailwind-corner-smoothing@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tailwind-corner-smoothing/-/tailwind-corner-smoothing-1.2.0.tgz#805ce25393e253b24897fa36345be2258088bc0a"
+  integrity sha512-lKeE58pOeIhrNbOjl6nxNSM8OMm7iTkuT01hpaipoZtVxzeN7K/Tsu4MrKdKtX/aTAwgOjaDcJghKUG1N4HcuQ==
+
 tailwindcss@4.1.5, tailwindcss@^4:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.5.tgz#d35607f1a351051bd29cda7e59ab2c222ca8deb6"
