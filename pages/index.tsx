@@ -72,11 +72,11 @@ export default function Home() {
           }}
         />
         <div className="px-18 pt-12">
-          <h1 className="text-7xl font-bold text-slate-800 z-10 relative">
+          <h1 className="text-7xl fade-animation font-bold text-slate-800 z-10 relative">
             Shubham Patil
           </h1>
 
-          <div className="pt-8 space-y-4">
+          <div className="pt-8 fade-animation space-y-4">
             <p className=" text-slate-800 z-10 relative">
               I'm an innovator, changemaker, and developer at heart.
             </p>
@@ -116,7 +116,7 @@ export default function Home() {
                 src="/sf-bay-area-map.png"
                 alt="Map of San Francisco Bay Area"
                 fill
-                loading="lazy"
+                loading="eager"
                 style={{ objectFit: "cover" }}
               />
             </div>

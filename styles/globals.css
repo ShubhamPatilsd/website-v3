@@ -11,3 +11,22 @@
 body {
   font-family: "NeueMontreal", sans-serif;
 }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fade-animation {
+  animation: 1s fadeInUp;
+}
