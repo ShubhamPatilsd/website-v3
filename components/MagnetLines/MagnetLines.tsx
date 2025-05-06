@@ -95,8 +95,7 @@ const MagnetLines: React.FC<MagnetLinesProps> = ({
       const a = window.innerHeight / 2 - centerY;
       const c = Math.sqrt(a * a + b * b) || 1;
       const r =
-        ((Math.acos(b / c) * 180) / Math.PI) *
-        (window.innerWidth / 2 > centerX ? 1 : -1);
+        ((Math.acos(b / c) * 180) / Math.PI) * (centerX > rect.x ? 1 : -1);
 
       item.style.setProperty("--rotate", `${r}deg`);
     });
