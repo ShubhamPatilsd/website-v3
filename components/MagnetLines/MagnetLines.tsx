@@ -81,6 +81,27 @@ const MagnetLines: React.FC<MagnetLinesProps> = ({
     />
   ));
 
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const items = container.querySelectorAll<HTMLSpanElement>("span");
+    items.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      const centerX = rect.x + rect.width / 2;
+      const centerY = rect.y + rect.height / 2;
+
+      const b = window.innerWidth / 2 - centerX;
+      const a = window.innerHeight / 2 - centerY;
+      const c = Math.sqrt(a * a + b * b) || 1;
+      const r =
+        ((Math.acos(b / c) * 180) / Math.PI) *
+        (window.innerWidth / 2 > centerX ? 1 : -1);
+
+      item.style.setProperty("--rotate", `${r}deg`);
+    });
+  }, []);
+
   return (
     <div
       ref={containerRef}

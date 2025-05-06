@@ -33,11 +33,11 @@ body {
 
 @keyframes popOut {
   0% {
-    transform: scale(0.2);
+    transform: scale(0.5);
     opacity: 0.8;
   }
 
-  50% {
+  30% {
     transform: scale(1.05);
     opacity: 1;
   }

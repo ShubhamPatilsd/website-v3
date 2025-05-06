@@ -63,7 +63,7 @@ export default function Home() {
           containerSize="20vh"
           rows={10}
           columns={40}
-          baseAngle={15}
+          baseAngle={40}
           lineHeight="3vh"
           lineWidth="0.25vh"
           style={{
