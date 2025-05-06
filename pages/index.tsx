@@ -100,12 +100,12 @@ export default function Home() {
           <div
             className={`fixed z-50 w-64 rounded-xl border border-gray-50 shadow bg-white p-2 pointer-events-none transition-all duration-300 ${
               tooltipVisible
-                ? "opacity-100 scale-100"
+                ? "pop-animation"
                 : "opacity-0 scale-95 origin-bottom-left"
             }`}
             style={{
               left: `${tooltipPosition.x}px`,
-              top: `${tooltipPosition.y}px`,
+              bottom: `${tooltipPosition.y}px`,
               transformOrigin: "bottom left",
               transition:
                 "left 0.1s ease-out, top 0.1s ease-out, opacity 0.2s ease, transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28)",

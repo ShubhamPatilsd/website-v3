@@ -30,3 +30,24 @@ body {
 .fade-animation {
   animation: 1s fadeInUp;
 }
+
+@keyframes popOut {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop-animation {
+  animation: 0.5s popOut;
+}
