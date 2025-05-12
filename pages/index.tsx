@@ -61,10 +61,10 @@ export default function Home() {
         <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full h-[30vh]"></div>
 
         <div className="px-16 pt-18 fade-in-animation">
-          <h1 className="text-6xl text-gray-800 z-10 relative font-medium">
+          <h1 className="text-6xl from-gray-800 to-gray-500  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
             Shubham Patil
           </h1>
-          <p className=" text-slate-400 mt-[7px] font-medium text-2xl z-10 relative">
+          <p className=" from-slate-400 to-slate-500 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-2xl z-10 relative">
             I'm an innovator, changemaker, and developer at heart.
           </p>
 
