@@ -56,27 +56,30 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <div className="w-full relative">
-        <MagnetLines
-          lineColor="#1D283D"
-          containerSize="20vh"
-          rows={10}
-          columns={40}
-          baseAngle={40}
-          lineHeight="3vh"
-          lineWidth="0.25vh"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        />
-        <div className="px-18 pt-12">
-          <h1 className="text-7xl fade-animation font-bold text-slate-800 z-10 relative">
+        <div className="bg-[url('/sky.jpg')] bg-cover w-full h-[30vh]">
+          <MagnetLines
+            lineColor="rgba(0,0,0,0.2)"
+            containerSize="20vh"
+            rows={10}
+            columns={40}
+            baseAngle={40}
+            lineHeight="3vh"
+            lineWidth="0.25vh"
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </div>
+
+        <div className="px-18 pt-18">
+          <h1 className="text-6xl fade-animation text-gray-800 z-10 relative font-medium">
             Shubham Patil
           </h1>
 
-          <div className="pt-8 fade-animation space-y-4">
+          <div className="pt-10 fade-animation space-y-2">
             <p className=" text-slate-800 z-10 relative">
               I'm an innovator, changemaker, and developer at heart.
             </p>
