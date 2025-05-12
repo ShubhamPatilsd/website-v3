@@ -56,45 +56,75 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white cursor-default">
       <div className="w-full relative">
-        <div className="bg-[url('/sky.jpg')] bg-cover w-full h-[30vh]"></div>
+        <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full h-[30vh]"></div>
 
-        <div className="px-18 pt-18">
-          <h1 className="text-6xl fade-animation text-gray-800 z-10 relative font-medium">
+        <div className="px-16 pt-18 fade-in-animation">
+          <h1 className="text-6xl text-gray-800 z-10 relative font-medium">
             Shubham Patil
           </h1>
-          <p className=" text-slate-400 mt-[5px] font-medium text-2xl z-10 relative">
+          <p className=" text-slate-400 mt-[7px] font-medium text-2xl z-10 relative">
             I'm an innovator, changemaker, and developer at heart.
           </p>
 
-          <div className="pt-10 fade-animation space-y-2">
-            <p className=" text-slate-800 z-10 relative">
+          <div className="pt-10 text-slate-600 space-y-2">
+            <p className="z-10 relative">
               I currently call{" "}
               <span
-                className="bg-amber-50 text-amber-800 font-bold border-b border-amber-500 pt-1 cursor-pointer relative"
+                className="underline cursor-default relative"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={() => setShowTooltip(false)}
                 onMouseMove={handleMouseMove}
               >
-                🌉 San Francisco
+                San Francisco
               </span>{" "}
               home.
             </p>
           </div>
-          <div className="pt-10 fade-animation space-y-2">
-            <p className=" text-slate-800 z-10 relative">
-              I currently call{" "}
-              <span
-                className="bg-amber-50 text-amber-800 font-bold border-b border-amber-500 pt-1 cursor-pointer relative"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={() => setShowTooltip(false)}
-                onMouseMove={handleMouseMove}
-              >
-                🌉 San Francisco
-              </span>{" "}
-              home.
-            </p>
+          <div className="grid grid-cols-3 w-full mt-12">
+            <div>
+              <h2 className="font-medium text-slate-600 text-lg">Socials</h2>
+              <ul className="mt-2">
+                <li className="text-slate-500">
+                  <a href="https://x.com/shubhampatilsd">X</a>
+                </li>
+                <li className="text-slate-500">
+                  <a href="">LinkedIn</a>
+                </li>
+                <li className="text-slate-500">
+                  <a href="">GitHub</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-medium text-slate-600 text-lg">Something</h2>
+              <ul className="mt-2">
+                <li className="text-slate-500">
+                  <a href="https://x.com/shubhampatilsd">X</a>
+                </li>
+                <li className="text-slate-500">
+                  <a href="">LinkedIn</a>
+                </li>
+                <li className="text-slate-500">
+                  <a href="">GitHub</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-medium text-slate-600 text-lg">Else</h2>
+              <ul className="mt-2">
+                <li className="text-slate-500">
+                  <a href="https://x.com/shubhampatilsd">X</a>
+                </li>
+                <li className="text-slate-500">
+                  <a href="">LinkedIn</a>
+                </li>
+                <li className="text-slate-500">
+                  <a href="">GitHub</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
