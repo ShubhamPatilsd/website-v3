@@ -68,21 +68,21 @@ export default function Home() {
             I'm an innovator, changemaker, and developer at heart.
           </p>
 
-          <div className="pt-10 text-slate-600 space-y-2">
-            <p className="z-10 relative">
-              I currently call{" "}
-              <span
-                className="underline cursor-default relative"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={() => setShowTooltip(false)}
-                onMouseMove={handleMouseMove}
-              >
-                San Francisco
-              </span>{" "}
-              home.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 w-full mt-12">
+          <div className="grid grid-cols-3 w-full mt-18">
+            <div className=" text-slate-600 space-y-2">
+              <p className="z-10 relative">
+                I currently call{" "}
+                <span
+                  className="underline cursor-default relative"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={() => setShowTooltip(false)}
+                  onMouseMove={handleMouseMove}
+                >
+                  San Francisco
+                </span>{" "}
+                home.
+              </p>
+            </div>
             <div>
               <h2 className="font-medium text-slate-600 text-lg">Socials</h2>
               <ul className="mt-2">
@@ -97,20 +97,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div>
-              <h2 className="font-medium text-slate-600 text-lg">Something</h2>
-              <ul className="mt-2">
-                <li className="text-slate-500">
-                  <a href="https://x.com/shubhampatilsd">X</a>
-                </li>
-                <li className="text-slate-500">
-                  <a href="">LinkedIn</a>
-                </li>
-                <li className="text-slate-500">
-                  <a href="">GitHub</a>
-                </li>
-              </ul>
-            </div>
+
             <div>
               <h2 className="font-medium text-slate-600 text-lg">Else</h2>
               <ul className="mt-2">
