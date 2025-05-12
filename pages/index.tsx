@@ -64,11 +64,25 @@ export default function Home() {
           <h1 className="text-6xl fade-animation text-gray-800 z-10 relative font-medium">
             Shubham Patil
           </h1>
+          <p className=" text-slate-400 mt-[5px] font-medium text-2xl z-10 relative">
+            I'm an innovator, changemaker, and developer at heart.
+          </p>
 
           <div className="pt-10 fade-animation space-y-2">
             <p className=" text-slate-800 z-10 relative">
-              I'm an innovator, changemaker, and developer at heart.
+              I currently call{" "}
+              <span
+                className="bg-amber-50 text-amber-800 font-bold border-b border-amber-500 pt-1 cursor-pointer relative"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={() => setShowTooltip(false)}
+                onMouseMove={handleMouseMove}
+              >
+                🌉 San Francisco
+              </span>{" "}
+              home.
             </p>
+          </div>
+          <div className="pt-10 fade-animation space-y-2">
             <p className=" text-slate-800 z-10 relative">
               I currently call{" "}
               <span
@@ -94,8 +108,8 @@ export default function Home() {
             }`}
             style={{
               left: `${tooltipPosition.x}px`,
-              bottom: `${tooltipPosition.y}px`,
-              transformOrigin: "bottom left",
+              top: `${tooltipPosition.y + 50}px`,
+              transformOrigin: "top left",
               transition:
                 "left 0.1s ease-out, top 0.1s ease-out, opacity 0.2s ease, transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28)",
             }}
