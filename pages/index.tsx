@@ -112,22 +112,28 @@ export default function Home() {
         <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[35vh] h-[20vh]"></div>
 
         <div className="px-7 md:px-16 pt-10 md:pt-18 fade-in-animation">
-          <h1 className="text-4xl md:text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
-            <span
-              onMouseEnter={(e) =>
-                handleMouseEnter(e, "/me.png", "Map of San Francisco Bay Area")
-              }
-              onMouseLeave={() => setShowTooltip(false)}
-              onMouseMove={handleMouseMove}
-            >
-              Shubham Patil
-            </span>
-          </h1>
-          <p className=" from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-xl md:text-2xl z-10 relative">
-            I'm an innovator, tinkerer, and developer at heart.
-          </p>
+          <div className="md:max-w-[70vw] mx-auto ">
+            <h1 className="text-4xl md:text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
+              <span
+                onMouseEnter={(e) =>
+                  handleMouseEnter(
+                    e,
+                    "/me.png",
+                    "Map of San Francisco Bay Area"
+                  )
+                }
+                onMouseLeave={() => setShowTooltip(false)}
+                onMouseMove={handleMouseMove}
+              >
+                Shubham Patil
+              </span>
+            </h1>
+            <p className=" from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-xl md:text-2xl z-10 relative">
+              I'm an innovator, tinkerer, and developer at heart.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
+          <div className="md:max-w-[70vw] mx-auto grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
             <div className=" text-slate-500 space-y-5 max-w-xs">
               <p>
                 Oftentimes, we lose ourselves in the pursuit of attaining mere
@@ -185,8 +191,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="font-medium text-slate-600 text-lg">Socials</h2>
-              <ul className="mt-2">
+              <ul className="">
                 <li className="text-slate-500">
                   <a
                     onMouseEnter={(e) =>
