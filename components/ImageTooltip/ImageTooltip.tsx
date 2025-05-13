@@ -18,7 +18,7 @@ function ImageTooltip({
 
   return (
     <div
-      className={`fixed z-50 w-64 rounded-xl border border-gray-50 shadow bg-white p-2 pointer-events-none transition-all duration-300 ${
+      className={`fixed z-50 w-[max(17vw,200px)]  rounded-2xl shadow-2xl pointer-events-none transition-all duration-300 ${
         isVisible ? "pop-animation" : "opacity-0 scale-95 origin-bottom-left"
       }`}
       style={{
@@ -29,7 +29,7 @@ function ImageTooltip({
           "left 0.1s ease-out, top 0.1s ease-out, opacity 0.2s ease, transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28)",
       }}
     >
-      <div className="relative h-60 w-full rounded-md overflow-hidden">
+      <div className="relative h-[max(11vw,132px)]  w-full overflow-hidden rounded-2xl">
         <Image
           src={imageSrc}
           alt={imageAlt}

@@ -109,7 +109,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white cursor-default">
       <div className="w-full relative">
-        <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full h-[40vh]"></div>
+        <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full h-[35vh]"></div>
 
         <div className="px-16 pt-18 fade-in-animation">
           <h1 className="text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
@@ -123,7 +123,7 @@ export default function Home() {
               Shubham Patil
             </span>
           </h1>
-          <p className=" from-slate-400 to-slate-500 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-2xl z-10 relative">
+          <p className=" from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-2xl z-10 relative">
             I'm an innovator, changemaker, and developer at heart.
           </p>
 
