@@ -109,10 +109,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white cursor-default">
       <div className="w-full relative">
-        <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full h-[35vh]"></div>
+        <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[35vh] h-[20vh]"></div>
 
-        <div className="px-16 pt-18 fade-in-animation">
-          <h1 className="text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
+        <div className="px-7 md:px-16 pt-10 md:pt-18 fade-in-animation">
+          <h1 className="text-4xl md:text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
             <span
               onMouseEnter={(e) =>
                 handleMouseEnter(e, "/me.png", "Map of San Francisco Bay Area")
@@ -123,31 +123,67 @@ export default function Home() {
               Shubham Patil
             </span>
           </h1>
-          <p className=" from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-2xl z-10 relative">
-            I'm an innovator, changemaker, and developer at heart.
+          <p className=" from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-xl md:text-2xl z-10 relative">
+            I'm an innovator, tinkerer, and developer at heart.
           </p>
 
-          <div className="grid grid-cols-3 w-full mt-18">
-            <div className=" text-slate-600 space-y-2 max-w-xs">
-              <p className="z-10 relative">
-                I currently call{" "}
-                <span
-                  className="underline cursor-default relative"
-                  onMouseEnter={(e) =>
-                    handleMouseEnter(
-                      e,
-                      "/sf-bay-area-map.png",
-                      "Map of San Francisco Bay Area"
-                    )
-                  }
-                  onMouseLeave={() => setShowTooltip(false)}
-                  onMouseMove={handleMouseMove}
-                >
-                  San Francisco
-                </span>{" "}
-                home.
+          <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
+            <div className=" text-slate-500 space-y-5 max-w-xs">
+              <p>
+                Oftentimes, we lose ourselves in the pursuit of attaining mere
+                "side effects."
+              </p>
+
+              <p>
+                Any form of success (however you define it) is merely the
+                byproduct of adhering to one core principle: the constant
+                process of exploring our innate curiosity.
               </p>
             </div>
+
+            <div>
+              <ul className="space-y-4">
+                <li className="z-10 relative text-slate-500">
+                  I currently call{" "}
+                  <span
+                    className="underline cursor-default relative"
+                    onMouseEnter={(e) =>
+                      handleMouseEnter(
+                        e,
+                        "/sf-bay-area-map.png",
+                        "Map of San Francisco Bay Area"
+                      )
+                    }
+                    onMouseLeave={() => setShowTooltip(false)}
+                    onMouseMove={handleMouseMove}
+                  >
+                    San Francisco
+                  </span>{" "}
+                  home.
+                </li>
+
+                <li className="z-10 relative text-slate-500">
+                  As I move on from high school, I find myself starting a new
+                  chapter at the{" "}
+                  <span
+                    className="underline cursor-default relative"
+                    onMouseEnter={(e) =>
+                      handleMouseEnter(
+                        e,
+                        "/waterloo.png",
+                        "University of Waterloo"
+                      )
+                    }
+                    onMouseLeave={() => setShowTooltip(false)}
+                    onMouseMove={handleMouseMove}
+                  >
+                    University of Waterloo
+                  </span>{" "}
+                  in the fall, majoring in Software Engineering.
+                </li>
+              </ul>
+            </div>
+
             <div>
               <h2 className="font-medium text-slate-600 text-lg">Socials</h2>
               <ul className="mt-2">
@@ -166,21 +202,6 @@ export default function Home() {
                   >
                     X
                   </a>
-                </li>
-                <li className="text-slate-500">
-                  <a href="">LinkedIn</a>
-                </li>
-                <li className="text-slate-500">
-                  <a href="">GitHub</a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="font-medium text-slate-600 text-lg">Else</h2>
-              <ul className="mt-2">
-                <li className="text-slate-500">
-                  <a href="https://x.com/shubhampatilsd">X</a>
                 </li>
                 <li className="text-slate-500">
                   <a href="">LinkedIn</a>
