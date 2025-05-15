@@ -1,6 +1,7 @@
 import MagnetLines from "@/components/MagnetLines/MagnetLines";
 import { useEffect, useState, MouseEvent, useCallback, useRef } from "react";
 import ImageTooltip from "@/components/ImageTooltip/ImageTooltip";
+import HeartAnimation from "@/components/HeartAnimation";
 import Image from "next/image";
 
 // Simple throttle function to limit the rate of function calls
@@ -28,6 +29,8 @@ export default function Home() {
     src: "/sf-bay-area-map.png",
     alt: "Map of San Francisco Bay Area",
   });
+  const [showHearts, setShowHearts] = useState(false);
+  const [heartsPosition, setHeartsPosition] = useState({ x: 0, y: 0 });
 
   // Ref to store last position to avoid unnecessary updates
   const lastPositionRef = useRef({ x: 0, y: 0 });
@@ -107,125 +110,141 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-white cursor-default">
-      <div className="w-full relative">
-        <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[35vh] h-[20vh]"></div>
+    <>
+      <HeartAnimation isActive={showHearts} position={heartsPosition} />
+      <div className="min-h-screen bg-white cursor-default">
+        <div className="w-full relative">
+          <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[35vh] h-[20vh]"></div>
 
-        <div className="px-7 md:px-16 pt-10 md:pt-18 fade-in-animation">
-          <div className="md:max-w-[70vw] mx-auto ">
-            <h1 className="text-4xl md:text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
-              <span
-                onMouseEnter={(e) =>
-                  handleMouseEnter(
-                    e,
-                    "/me.png",
-                    "Map of San Francisco Bay Area"
-                  )
-                }
-                onMouseLeave={() => setShowTooltip(false)}
-                onMouseMove={handleMouseMove}
-              >
-                Shubham Patil
-              </span>
-            </h1>
-            <p className=" from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-xl md:text-2xl z-10 relative">
-              I'm an innovator, tinkerer, and developer at heart.
-            </p>
+          <div className="px-7 md:px-16 pt-10 md:pt-18 fade-in-animation">
+            <div className="md:max-w-[70vw] mx-auto ">
+              <h1 className="text-4xl md:text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
+                <span
+                  onMouseEnter={(e) =>
+                    handleMouseEnter(
+                      e,
+                      "/me.png",
+                      "Map of San Francisco Bay Area"
+                    )
+                  }
+                  onMouseLeave={() => setShowTooltip(false)}
+                  onMouseMove={handleMouseMove}
+                >
+                  Shubham Patil
+                </span>
+              </h1>
+              <p className="from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-xl md:text-2xl z-10 relative">
+                I'm an innovator, tinkerer, and developer at{" "}
+                <span
+                  onMouseEnter={(e) => {
+                    setShowHearts(true);
+
+                    setHeartsPosition({ x: e.clientX, y: e.clientY - 15 });
+                  }}
+                  onMouseLeave={() => setShowHearts(false)}
+                >
+                  heart
+                </span>
+                .
+              </p>
+            </div>
+
+            <div className="md:max-w-[70vw] mx-auto grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
+              <div className=" text-slate-500 space-y-5 max-w-xs">
+                <p>
+                  Oftentimes, we lose ourselves in the pursuit of attaining mere
+                  "side effects."
+                </p>
+
+                <p>
+                  Any form of success (however you define it) is merely the
+                  byproduct of adhering to one core principle: the constant
+                  process of exploring our innate curiosity.
+                </p>
+              </div>
+
+              <div>
+                <ul className="space-y-4">
+                  <li className="z-10 relative text-slate-500">
+                    I currently call{" "}
+                    <span
+                      className="underline cursor-default relative"
+                      onMouseEnter={(e) =>
+                        handleMouseEnter(
+                          e,
+                          "/sf-bay-area-map.png",
+                          "Map of San Francisco Bay Area"
+                        )
+                      }
+                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseMove={handleMouseMove}
+                    >
+                      San Francisco
+                    </span>{" "}
+                    home.
+                  </li>
+
+                  <li className="z-10 relative text-slate-500">
+                    As I move on from high school, I find myself starting a new
+                    chapter at the{" "}
+                    <span
+                      className="underline cursor-default relative"
+                      onMouseEnter={(e) =>
+                        handleMouseEnter(
+                          e,
+                          "/waterloo.png",
+                          "University of Waterloo"
+                        )
+                      }
+                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseMove={handleMouseMove}
+                    >
+                      University of Waterloo
+                    </span>{" "}
+                    in the fall, majoring in Software Engineering.
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <ul className="">
+                  <li className="text-slate-500">
+                    <a
+                      onMouseEnter={(e) =>
+                        handleMouseEnter(
+                          e,
+                          "/x.png",
+                          "Map of San Francisco Bay Area"
+                        )
+                      }
+                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseMove={handleMouseMove}
+                      href="https://x.com/shubhampatilsd"
+                    >
+                      X
+                    </a>
+                  </li>
+                  <li className="text-slate-500">
+                    <a href="">LinkedIn</a>
+                  </li>
+                  <li className="text-slate-500">
+                    <a href="">GitHub</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div className="md:max-w-[70vw] mx-auto grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
-            <div className=" text-slate-500 space-y-5 max-w-xs">
-              <p>
-                Oftentimes, we lose ourselves in the pursuit of attaining mere
-                "side effects."
-              </p>
+          <ImageTooltip
+            imageSrc={tooltipImage.src}
+            imageAlt={tooltipImage.alt}
+            isVisible={tooltipVisible}
+            position={tooltipPosition}
+          />
 
-              <p>
-                Any form of success (however you define it) is merely the
-                byproduct of adhering to one core principle: the constant
-                process of exploring our innate curiosity.
-              </p>
-            </div>
-
-            <div>
-              <ul className="space-y-4">
-                <li className="z-10 relative text-slate-500">
-                  I currently call{" "}
-                  <span
-                    className="underline cursor-default relative"
-                    onMouseEnter={(e) =>
-                      handleMouseEnter(
-                        e,
-                        "/sf-bay-area-map.png",
-                        "Map of San Francisco Bay Area"
-                      )
-                    }
-                    onMouseLeave={() => setShowTooltip(false)}
-                    onMouseMove={handleMouseMove}
-                  >
-                    San Francisco
-                  </span>{" "}
-                  home.
-                </li>
-
-                <li className="z-10 relative text-slate-500">
-                  As I move on from high school, I find myself starting a new
-                  chapter at the{" "}
-                  <span
-                    className="underline cursor-default relative"
-                    onMouseEnter={(e) =>
-                      handleMouseEnter(
-                        e,
-                        "/waterloo.png",
-                        "University of Waterloo"
-                      )
-                    }
-                    onMouseLeave={() => setShowTooltip(false)}
-                    onMouseMove={handleMouseMove}
-                  >
-                    University of Waterloo
-                  </span>{" "}
-                  in the fall, majoring in Software Engineering.
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <ul className="">
-                <li className="text-slate-500">
-                  <a
-                    onMouseEnter={(e) =>
-                      handleMouseEnter(
-                        e,
-                        "/x.png",
-                        "Map of San Francisco Bay Area"
-                      )
-                    }
-                    onMouseLeave={() => setShowTooltip(false)}
-                    onMouseMove={handleMouseMove}
-                    href="https://x.com/shubhampatilsd"
-                  >
-                    X
-                  </a>
-                </li>
-                <li className="text-slate-500">
-                  <a href="">LinkedIn</a>
-                </li>
-                <li className="text-slate-500">
-                  <a href="">GitHub</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <HeartAnimation isActive={showHearts} position={heartsPosition} />
         </div>
-
-        <ImageTooltip
-          imageSrc={tooltipImage.src}
-          imageAlt={tooltipImage.alt}
-          isVisible={tooltipVisible}
-          position={tooltipPosition}
-        />
       </div>
-    </div>
+    </>
   );
 }
