@@ -34,6 +34,8 @@ function ImageTooltip({
           src={imageSrc}
           alt={imageAlt}
           fill
+          placeholder="blur"
+          blurDataURL={imageSrc}
           loading="eager"
           priority
           style={{ objectFit: "cover" }}
