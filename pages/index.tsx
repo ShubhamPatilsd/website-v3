@@ -117,7 +117,7 @@ export default function Home() {
           <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[35vh] h-[20vh]"></div>
 
           <div className="px-7 md:px-16 pt-10 md:pt-18 fade-in-animation">
-            <div className="md:max-w-[70vw] mx-auto ">
+            <div className=" ">
               <h1 className="text-4xl md:text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
                 <span
                   onMouseEnter={(e) =>
@@ -149,7 +149,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="md:max-w-[70vw] mx-auto grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
+            <div className="md:max-w-[70vw] grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
               <div className=" text-slate-500 space-y-5 max-w-xs">
                 <p>
                   Oftentimes, we lose ourselves in the pursuit of attaining mere
@@ -228,7 +228,16 @@ export default function Home() {
                     <a href="">LinkedIn</a>
                   </li>
                   <li className="text-slate-500">
-                    <a href="">GitHub</a>
+                    <a
+                      onMouseEnter={(e) =>
+                        handleMouseEnter(e, "/github.png", "GitHub")
+                      }
+                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseMove={handleMouseMove}
+                      href="https://github.com/ShubhamPatilsd"
+                    >
+                      GitHub
+                    </a>
                   </li>
                 </ul>
               </div>
