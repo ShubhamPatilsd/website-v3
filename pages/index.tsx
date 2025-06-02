@@ -1,8 +1,6 @@
 import MagnetLines from "@/components/MagnetLines/MagnetLines";
 import { useEffect, useState, MouseEvent, useCallback, useRef } from "react";
 import ImageTooltip from "@/components/ImageTooltip/ImageTooltip";
-import HeartAnimation from "@/components/HeartAnimation";
-import Image from "next/image";
 
 // Simple throttle function to limit the rate of function calls
 function throttle<T extends (...args: any[]) => any>(
@@ -29,8 +27,6 @@ export default function Home() {
     src: "/sf-bay-area-map.png",
     alt: "Map of San Francisco Bay Area",
   });
-  const [showHearts, setShowHearts] = useState(false);
-  const [heartsPosition, setHeartsPosition] = useState({ x: 0, y: 0 });
 
   // Ref to store last position to avoid unnecessary updates
   const lastPositionRef = useRef({ x: 0, y: 0 });
@@ -111,7 +107,6 @@ export default function Home() {
 
   return (
     <>
-      <HeartAnimation isActive={showHearts} position={heartsPosition} />
       <div className="min-h-screen bg-white cursor-default">
         <div className="w-full relative">
           <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[35vh] h-[20vh]"></div>
@@ -135,17 +130,7 @@ export default function Home() {
               </h1>
               <p className="from-slate-400 to-slate-400 bg-clip-text text-transparent bg-gradient-to-b mt-[7px] font-medium text-xl md:text-2xl z-10 relative">
                 I'm an innovator, tinkerer, and developer at{" "}
-                <span
-                  onMouseEnter={(e) => {
-                    setShowHearts(true);
-
-                    setHeartsPosition({ x: e.clientX, y: e.clientY - 15 });
-                  }}
-                  onMouseLeave={() => setShowHearts(false)}
-                >
-                  heart
-                </span>
-                .
+                <span className="cursor-default">heart</span>.
               </p>
             </div>
 
