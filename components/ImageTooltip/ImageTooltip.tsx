@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { memo } from "react";
 
 interface ImageTooltipProps {
@@ -29,19 +28,17 @@ function ImageTooltip({
           "left 0.1s ease-out, top 0.1s ease-out, opacity 0.2s ease, transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28)",
       }}
     >
-      <div className="relative h-[max(11vw,132px)]  w-full overflow-hidden rounded-2xl">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          placeholder="blur"
-          blurDataURL={imageSrc}
-          loading="eager"
-          priority
-          style={{ objectFit: "cover" }}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
+      <div
+        className="relative h-[max(11vw,132px)] w-full overflow-hidden rounded-2xl"
+        style={{
+          backgroundImage: `url(${imageSrc})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        role="img"
+        aria-label={imageAlt}
+      />
     </div>
   );
 }

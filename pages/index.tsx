@@ -250,8 +250,6 @@ export default function Home() {
             isVisible={tooltipVisible}
             position={tooltipPosition}
           />
-
-          <HeartAnimation isActive={showHearts} position={heartsPosition} />
         </div>
       </div>
     </>
