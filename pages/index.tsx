@@ -177,16 +177,16 @@ export default function Home() {
                       onMouseEnter={(e) =>
                         handleMouseEnter(
                           e,
-                          "/waterloo.png",
-                          "University of Waterloo"
+                          "/ucsd.png",
+                          "University of California, San Diego"
                         )
                       }
                       onMouseLeave={() => setShowTooltip(false)}
                       onMouseMove={handleMouseMove}
                     >
-                      University of Waterloo
+                      University of California, San Diego
                     </span>{" "}
-                    in the fall, majoring in Software Engineering.
+                    in the fall, majoring in Computer Engineering.
                   </li>
                 </ul>
               </div>
