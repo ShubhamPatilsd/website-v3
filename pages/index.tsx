@@ -134,7 +134,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw]">
+            <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw] max-w-[80rem]">
               <div className=" text-slate-500 space-y-5 max-w-xs">
                 <p>
                   Oftentimes, we lose ourselves in the pursuit of attaining mere
@@ -210,8 +210,18 @@ export default function Home() {
                     </a>
                   </li>
                   <li className="text-slate-500">
-                    <a href="">LinkedIn</a>
+                    <a
+                      onMouseEnter={(e) =>
+                        handleMouseEnter(e, "/linkedin.png", "LinkedIn")
+                      }
+                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseMove={handleMouseMove}
+                      href="https://www.linkedin.com/in/shubhampatilsd/"
+                    >
+                      LinkedIn
+                    </a>
                   </li>
+
                   <li className="text-slate-500">
                     <a
                       onMouseEnter={(e) =>
@@ -222,6 +232,18 @@ export default function Home() {
                       href="https://github.com/ShubhamPatilsd"
                     >
                       GitHub
+                    </a>
+                  </li>
+                  <li className="text-slate-500">
+                    <a
+                      onMouseEnter={(e) =>
+                        handleMouseEnter(e, "/mail.png", "Mail")
+                      }
+                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseMove={handleMouseMove}
+                      href="mailto:shubhampatilsd@gmail.com"
+                    >
+                      Mail
                     </a>
                   </li>
                 </ul>
