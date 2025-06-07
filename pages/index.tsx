@@ -109,9 +109,9 @@ export default function Home() {
     <>
       <div className="min-h-screen bg-white cursor-default">
         <div className="w-full relative">
-          <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[35vh] h-[20vh]"></div>
+          <div className="fade-in-animation bg-[url('/sky.jpg')] bg-cover w-full md:h-[28vh] h-[20vh]"></div>
 
-          <div className="mx-auto md:max-w-[90vw] px-7 md:px-16 pt-10 md:pt-18 fade-in-animation">
+          <div className="mx-auto  px-7 md:px-20 pt-10 md:pt-18 fade-in-animation">
             <div className=" ">
               <h1 className="text-4xl md:text-6xl from-gray-800 to-gray-700  bg-clip-text text-transparent bg-gradient-to-t z-10 relative font-medium">
                 <span
@@ -134,22 +134,54 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-18 gap-[10vw] max-w-[80rem]">
-              <div className=" text-slate-500 space-y-5 max-w-xs">
+            <div className="grid grid-cols-1 md:grid-cols-3 w-full mt-10 md:mt-16 gap-10 md:gap-[10%]">
+              <div className=" text-slate-500 space-y-5 max-w-md">
                 <p>
                   Oftentimes, we lose ourselves in the pursuit of attaining mere
-                  "side effects."
+                  "side effects," treating them as our end goal.
                 </p>
 
                 <p>
-                  Any form of success (however you define it) is merely the
-                  byproduct of adhering to one core principle: the constant
-                  process of exploring our innate curiosity.
+                  However, any form of success (however one defines it) comes as
+                  a side effect of adhering to one simple principle: constantly
+                  exploring our innate curiosity.
+                </p>
+
+                <p>
+                  A few years ago, I dedicated myself to following this guiding
+                  light, and since then I've{" "}
+                  <a
+                    onMouseEnter={(e) =>
+                      handleMouseEnter(e, "/outernet.png", "Outernet")
+                    }
+                    onMouseLeave={() => setShowTooltip(false)}
+                    onMouseMove={handleMouseMove}
+                    className="underline"
+                    href="https://outernet.hackclub.com"
+                  >
+                    organized hackathons in the forest,
+                  </a>{" "}
+                  presented biometric scanners at NASA, and engineered
+                  experiences for thousands of techincal teenagers like myself.
                 </p>
               </div>
 
-              <div>
+              <div className="max-w-md">
                 <ul className="space-y-4">
+                  <li className="z-10 relative text-slate-500">
+                    I'm currently crafting new computing experiences at{" "}
+                    <span
+                      className="underline cursor-default relative"
+                      onMouseEnter={(e) =>
+                        handleMouseEnter(e, "/beem.png", "Beem")
+                      }
+                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseMove={handleMouseMove}
+                    >
+                      Beem
+                    </span>
+                    .
+                  </li>
                   <li className="z-10 relative text-slate-500">
                     I currently call{" "}
                     <span
@@ -191,7 +223,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div>
+              <div className="max-w-md">
                 <ul className="">
                   <li className="text-slate-500">
                     <a
