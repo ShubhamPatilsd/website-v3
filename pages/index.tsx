@@ -123,7 +123,7 @@ export default function Home() {
         <meta property="og:title" content="Shubham Patil" />
         <meta
           property="og:description"
-          content="Shubham Patil is an innovator, tinkerer, and developer working on making computers more personal."
+          content="Innovator, tinkerer, and developer at heart working on making computers more personal."
         />
 
         {/* Additional SEO */}
